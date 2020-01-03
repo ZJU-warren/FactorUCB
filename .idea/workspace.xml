@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="160c1715-1a54-468a-a85a-3380645bd307" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/B_FactorUCB/FactorItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/B_FactorUCB/FactorItem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +18,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../BanditGroup@302/AliCode/bandit" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -121,7 +119,8 @@
       <updated>1577968748057</updated>
       <workItem from="1577968754997" duration="8214000" />
       <workItem from="1578024763872" duration="1017000" />
-      <workItem from="1578025870920" duration="92000" />
+      <workItem from="1578025870920" duration="741000" />
+      <workItem from="1578040480599" duration="81000" />
     </task>
     <servers />
   </component>
