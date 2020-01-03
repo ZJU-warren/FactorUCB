@@ -22,9 +22,10 @@ def main():
     total_reward = 0
     random_reward = 0.0000001
     t_round = 0
-    # pre_time = time.time()
-    # avg_time = 0
-    # batch_size = 5
+
+    pre_time = time.time()
+    avg_time = 0
+    batch_size = 5
 
     with open(DLSet.result_link, 'w') as wf:
         wf.write(',0' + '\n')
@@ -49,17 +50,16 @@ def main():
                         wf.write(str(t_round) + ',' + str(total_reward / random_reward) + '\n')
                     else:
                         wf.write(str(t_round) + ',0' + '\n')
-            break
+
                 # print
-                # if t_round % batch_size == 0:
-                #     cost_time = time.time() - pre_time
-                #     pre_time = time.time()
-                #     n = t_round // batch_size
-                #     avg_time += (cost_time - avg_time) / (n + 1)
-                #     print("t_round = {}/437593, cost_time = {}: total_reward = {}, random_reward = {}, ratio = {}"
-                #           .format(t_round, cost_time, total_reward, random_reward,
-                #                   total_reward / random_reward))
-    # print(t_round)
+                if t_round % batch_size == 0:
+                    cost_time = time.time() - pre_time
+                    pre_time = time.time()
+                    n = t_round // batch_size
+                    avg_time += (cost_time - avg_time) / (n + 1)
+                    print("t_round = {}/437593, cost_time = {}: total_reward = {}, random_reward = {}, ratio = {}"
+                          .format(t_round, cost_time, total_reward, random_reward,
+                                  total_reward / random_reward))
 
 
 if __name__ == '__main__':
