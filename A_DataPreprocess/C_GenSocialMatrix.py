@@ -1,10 +1,10 @@
 import sys; sys.path.append('../')
-from tools import *
-import pandas as pd
+from Tools.DataTools import *
 import DataSetLink as DLSet
 from sklearn.cluster import SpectralClustering
 
 
+# generate cluster
 def graph_cluster(mat, k=200):
     # spectral cluster
     model = SpectralClustering(n_clusters=k, gamma=0.1, affinity='precomputed')
@@ -29,6 +29,8 @@ def graph_cluster(mat, k=200):
 
 
 def main():
+    n_cluster = 50
+
     # load social data
     social = load_data(DLSet.social_filename, '\t')[['A', 'B']]
     map_user = load_data(DLSet.map_link % 'userID')
@@ -36,8 +38,8 @@ def main():
 
     # replace the userID by map_userID and generate the social matrix
     social_mat = gen_social_matrix(social, map_user, user_num)
-    social_mat = graph_cluster(social_mat)
-    store_obj(social_mat, DLSet.social_mat_link)
+    social_mat = graph_cluster(social_mat, n_cluster)
+    store_obj(social_mat, DLSet.social_mat_link % n_cluster)
 
 
 if __name__ == '__main__':

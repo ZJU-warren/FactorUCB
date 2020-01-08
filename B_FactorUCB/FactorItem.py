@@ -1,5 +1,5 @@
 import sys; sys.path.append('../')
-from MathTools import *
+from Tools.MathTools import *
 
 
 class FactorItem:
@@ -29,8 +29,8 @@ class FactorItem:
         self.C += tvw.dot(tvw.T)                                    # line 14
         self.d += tvw.dot(r - self.x.T.dot(txw))                    # line 15
 
-        # self.CI = np.linalg.inv(self.C)
-        self.CI = fast_inverse(self.CI, tvw)
+        self.CI = np.linalg.inv(self.C)
+        # self.CI = fast_inverse(self.CI, tvw)
         self.v = self.CI.dot(self.d)                                # line 16
 
         self.v = normalize(join(self.x, self.v))[self.d_:]          # line 17

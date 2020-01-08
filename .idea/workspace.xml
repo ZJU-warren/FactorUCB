@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="160c1715-1a54-468a-a85a-3380645bd307" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Result.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preProcess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_Delicious_DataPreprocess/Gen_Matrix.py" beforeDir="false" afterPath="$PROJECT_DIR$/A_DataPreprocess/C_GenSocialMatrix.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_LastFM_DataPreprocess/A_GenContext.py" beforeDir="false" afterPath="$PROJECT_DIR$/A_DataPreprocess/A_GenContext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_LastFM_DataPreprocess/B_GenData.py" beforeDir="false" afterPath="$PROJECT_DIR$/A_DataPreprocess/B_GenBanditData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/A_LastFM_DataPreprocess/BanditData.py" beforeDir="false" afterPath="$PROJECT_DIR$/BanditData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B_FactorUCB/FactorItem.py" beforeDir="false" afterPath="$PROJECT_DIR$/B_FactorUCB/FactorItem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B_FactorUCB/FactorUCB.py" beforeDir="false" afterPath="$PROJECT_DIR$/B_FactorUCB/FactorUCB.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/B_FactorUCB/ProxyAgent.py" beforeDir="false" afterPath="$PROJECT_DIR$/B_FactorUCB/ProxyAgent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataSetLink.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataSetLink.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MathTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/MathTools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/DataTools.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +31,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../BanditGroup@302/AliCode/bandit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/A_Delicious_DataPreprocess" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Tools" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/A_Delicious_DataPreprocess" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/A_Delicious_DataPreprocess" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -32,8 +55,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main">
-    <configuration name="Gen_Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.preProcess">
+    <configuration name="B_GenBanditData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -41,12 +64,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/A_Delicious_DataPreprocess" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/A_DataPreprocess" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/A_Delicious_DataPreprocess/Gen_Matrix.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/A_DataPreprocess/B_GenBanditData.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="C_GenSocialMatrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/A_DataPreprocess" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/A_DataPreprocess/C_GenSocialMatrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -77,7 +122,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ProxyAgent" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Result" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -85,12 +130,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/B_FactorUCB" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/B_FactorUCB/ProxyAgent.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Result.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="preProcess" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preProcess.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,9 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.preProcess" />
+        <item itemvalue="Python.Result" />
         <item itemvalue="Python.Main" />
-        <item itemvalue="Python.Gen_Matrix" />
-        <item itemvalue="Python.ProxyAgent" />
+        <item itemvalue="Python.B_GenBanditData" />
+        <item itemvalue="Python.C_GenSocialMatrix" />
       </list>
     </recent_temporary>
   </component>
@@ -121,6 +190,7 @@
       <workItem from="1578024763872" duration="1017000" />
       <workItem from="1578025870920" duration="741000" />
       <workItem from="1578040480599" duration="81000" />
+      <workItem from="1578044267966" duration="18149000" />
     </task>
     <servers />
   </component>
@@ -142,7 +212,13 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Code$Gen_Matrix.coverage" NAME="Gen_Matrix Coverage Results" MODIFIED="1578015845105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_Delicious_DataPreprocess" />
-    <SUITE FILE_PATH="coverage/Code$Main.coverage" NAME="Main Coverage Results" MODIFIED="1578017530929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Code$preProcess.coverage" NAME="preProcess Coverage Results" MODIFIED="1578318639267" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Code$C_GenSocialMatrix.coverage" NAME="C_GenSocialMatrix Coverage Results" MODIFIED="1578301280931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_DataPreprocess" />
+    <SUITE FILE_PATH="coverage/Code$B_GenBanditData.coverage" NAME="B_GenBanditData Coverage Results" MODIFIED="1578306172464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_DataPreprocess" />
+    <SUITE FILE_PATH="coverage/Code$Main.coverage" NAME="Main Coverage Results" MODIFIED="1578306373749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Code$Result.coverage" NAME="Result Coverage Results" MODIFIED="1578314178454" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Code$B_GenData.coverage" NAME="B_GenData Coverage Results" MODIFIED="1578300908022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_Delicious_DataPreprocess" />
     <SUITE FILE_PATH="coverage/Code$ProxyAgent.coverage" NAME="ProxyAgent Coverage Results" MODIFIED="1578012115486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/B_FactorUCB" />
+    <SUITE FILE_PATH="coverage/Code$A_GenContext.coverage" NAME="A_GenContext Coverage Results" MODIFIED="1578299521601" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A_Delicious_DataPreprocess" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 import sys; sys.path.append('../')
-from tools import *
+from Tools.DataTools import *
 import DataSetLink as DLSet
 import Constant
 import random
@@ -8,36 +8,43 @@ from B_FactorUCB.ProxyAgent import ProxyAgent
 
 
 def main():
+    n_cluster = 50
+
     # load data
-    W = load_obj(DLSet.social_mat_link)
+    W = load_obj(DLSet.social_mat_link % n_cluster)
     user_cluster_df = load_data(DLSet.user_clusterID_link).values
+    item_context = load_obj(DLSet.item_context_link)
 
     # state the agent
     agent = ProxyAgent(
-        d=Constant.pca_component, l=5, N=W.shape[0], W=W,
-        lambda_1=1, lambda_2=1, alpha_u=0.1, alpha_a=0.1,
+        d=Constant.pca_component, l=0, N=W.shape[0], W=W,
+        lambda_1=1, lambda_2=1, alpha_u=0.1, alpha_a=0.1, item_context=item_context,
     )
 
     # measure
     total_reward = 0
-    random_reward = 0.0000001
+    random_reward = 0
     t_round = 0
 
     pre_time = time.time()
     avg_time = 0
-    batch_size = 5
+    batch_size = 100
 
-    with open(DLSet.result_link, 'w') as wf:
-        wf.write(',0' + '\n')
+    log_file_path = DLSet.result_link % 'coLin'
+    with open(log_file_path, 'w') as wf:
+        wf.write('n_round,ratio' + '\n')
 
-    for i in range(5):
+    for i in range(1, 5):
         with open(DLSet.bandit_data_link % i, 'r') as f:
             for line in f:
-                t_round += 1
+                log = eval(line)
+                if log['bandit_id'] >= user_cluster_df.shape[0]:
+                    continue
 
-                # take one step
-                with open(DLSet.result_link, 'a') as wf:
-                    log = json.loads(line)
+                # take one log
+                t_round += 1
+                with open(log_file_path, 'a') as wf:
+
                     log['bandit_id'] = user_cluster_df[log['bandit_id'], 1]
 
                     # random choose

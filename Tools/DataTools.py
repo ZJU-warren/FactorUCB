@@ -82,14 +82,16 @@ def batch_write(logs, data_link, batch_size=100000):
         with open(data_link % (i+1), 'w') as f_bandit_data:
             start = i * batch_size
             for each in logs[start: min(start + batch_size, total)]:
-                f_bandit_data.write(each + '\n')
+                f_bandit_data.write(each)
 
 
 # show the dictionary tree
-def show_dict(obj, deep=0):
+def show_dict(obj, deep=1):
     if type(obj) is dict:
         for key in obj.keys():
+            print(key, type(obj[key]))
             if type(obj[key]) is dict:
-                print('-' * deep, key)
+                print('-' * deep, type(obj[key]))
                 show_dict(obj[key], deep + 1)
-
+            if type(obj[key]) is list:
+                print('-' * deep, type(obj[key][0]))

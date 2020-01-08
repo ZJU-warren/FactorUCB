@@ -1,5 +1,6 @@
 import sys; sys.path.append('../')
 
+
 class BanditData(object):
     def __init__(self, timestamp=-1, bandit_id=-1, arm_reward=None,
                  arm_true_reward=None, arm_context=None, bandit_context=None):

@@ -1,5 +1,5 @@
 import sys; sys.path.append('../')
-from MathTools import *
+from Tools.MathTools import *
 from B_FactorUCB.FactorItem import FactorItem
 
 
@@ -54,9 +54,10 @@ class FactorUCB:
 
     def update(self, r):                                                # line 10
         vec_0X0V_WT_a = self.items_pool[self.rec_item].vec_0X0V_WT
-        # self.A += vec_0X0V_WT_a.dot(vec_0X0V_WT_a.T)                  # line 11
+        self.A += vec_0X0V_WT_a.dot(vec_0X0V_WT_a.T)                  # line 11
         self.b = self.b + vec_0X0V_WT_a * r                             # line 12
         self.AI = fast_inverse(self.AI, vec_0X0V_WT_a.T)
+        self.AI = np.linalg.inv(self.A)
 
         self.theta = self.AI.dot(self.b)                                # line 13
         self.items_pool[self.rec_item]\

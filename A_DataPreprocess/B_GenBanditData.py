@@ -1,11 +1,12 @@
+import sys; sys.path.append('../')
 import DataSetLink as DLSet
-from tools import *
+from Tools.DataTools import *
 import random
 import Constant
-from A_LastFM_DataPreprocess.BanditData import BanditData
-import sys; sys.path.append('../')
+from BanditData import BanditData
 
 
+# load data
 def load_basic_data():
     logs = load_data(DLSet.logs_link)
     sub_logs = load_data(DLSet.sub_logs_link)
@@ -15,6 +16,7 @@ def load_basic_data():
     return logs, sub_logs, user_context, item_context, user_selected
 
 
+# generate logs
 def gen_data(diff_logs, data_count, user_context, item_context, user_selected):
     result_logs = []
     diff_logs = diff_logs.sort_values(['timestamp'], ascending=True)
@@ -45,9 +47,9 @@ def gen_data(diff_logs, data_count, user_context, item_context, user_selected):
         bandit_data = BanditData(timestamp=t, arm_reward=rewards, arm_context=arm_context,
                                  arm_true_reward=arm_true_reward, bandit_id=u, bandit_context=bandit_context)
         result_logs.append(str(bandit_data.__dict__) + '\n')
-
         cnt += 1
-        # print("%d / %d" % (cnt, diff_logs.shape[0]))
+        if cnt % 1000 == 0:
+            print("%d / %d" % (cnt, diff_logs.shape[0]))
     return result_logs
 
 
@@ -63,12 +65,9 @@ def main():
     result_logs = gen_data(diff_logs, data_count, user_context, item_context, user_selected)
     batch_write(result_logs, DLSet.bandit_data_link)
 
-    # generate the relation matrix
-    social = load_data(DLSet.social_filename, '\t')
-    map_user = load_data(DLSet.map_link % 'userID')
-    social_mat = gen_social_matrix(social, map_user, data_count['userID'])
-    store_obj(social_mat, DLSet.social_mat_link)
-
 
 if __name__ == '__main__':
     main()
+
+
+# {'userID': 1867, 'itemID': 69223, 'tagID': 40897, 'timestamp': 104093}
